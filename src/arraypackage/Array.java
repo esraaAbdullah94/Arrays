@@ -5,9 +5,9 @@ import java.util.Map;
 public class Array {
 
 	public static void main(String[] args) {
-		String[] names = {"Esraa", "Jannah", "Esraa", "Alice"};
+		String[] names = {"Esraa", "Jannah", "Esraa", "Alice","Jannah"};
 
-	    Map<String, Integer> counts = new HashMap<>();
+		Map<String, Integer> counts = new HashMap<>();
 
 	    for (String name : names) {
 	      if (counts.containsKey(name)) {
@@ -17,12 +17,11 @@ public class Array {
 	      }
 	    }
 
-	    for (Map.Entry<String, Integer> entry : counts.entrySet()) {
-	      if (entry.getValue() > 1) {
-	        System.out.println(entry.getKey() + " appears " + entry.getValue() + " times");
+	    for (String name : names) {
+	      if (counts.get(name) > 1) {
+	        System.out.println(name + " appears " + counts.get(name) + " times");
 	      }
 	    }
-		
 		
 		
 				
