@@ -1,30 +1,26 @@
 package arraypackage;
 
-import java.util.HashMap;
-import java.util.Map;
+//import java.util.ArrayList;
+//import java.util.List;
+//import java.util.Scanner;
+
 public class Array {
 
 	public static void main(String[] args) {
-		String[] names = {"Esraa", "Jannah", "Esraa", "Alice","Jannah"};
+		int number[] = { 1, 2, 22, 2 };
+		int largest = 0;
+		for (int i = 0; i < number.length; i++) {
+			if (number[i] > largest) {
+				largest = number[i];
+			}
+		}
+		System.out.println("Qustion 1");
+		System.out.println("Finding largest number using 1 for loop");
 
-		Map<String, Integer> counts = new HashMap<>();
-
-	    for (String name : names) {
-	      if (counts.containsKey(name)) {
-	        counts.put(name, counts.get(name) + 1);
-	      } else {
-	        counts.put(name, 1);
-	      }
-	    }
-
-	    for (String name : names) {
-	      if (counts.get(name) > 1) {
-	        System.out.println(name + " appears " + counts.get(name) + " times");
-	      }
-	    }
+		System.out.println("Largest number: " + largest);
 		
+		System.out.println("**********************");
 		
-				
 	}
 
 }
