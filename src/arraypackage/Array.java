@@ -1,8 +1,8 @@
 package arraypackage;
 
-//import java.util.ArrayList;
-//import java.util.List;
-//import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Array {
 
@@ -20,6 +20,29 @@ public class Array {
 		System.out.println("Largest number: " + largest);
 		
 		System.out.println("**********************");
+		System.out.println("Qustion 2");
+		///////////
+
+		Scanner scanner = new Scanner(System.in);
+
+		while (true) {
+			System.out.print("Enter a  first number : ");
+			int num = scanner.nextInt();
+			System.out.print("Enter a second number : ");
+			int num2 = scanner.nextInt();
+
+			if (num >= 0 && num <= 100 && num2 >= 0 && num2 <= 100) {
+				// the number is within the range, so we can break out of the loop
+				break;
+			}
+
+			else {
+				System.out.println("The number is out of range. Please try again.");
+			}
+		}
+		
+		
+		scanner.close();
 		
 	}
 
