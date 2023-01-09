@@ -41,6 +41,20 @@ public class Array {
 			}
 		}
 		
+		System.out.println("**********************");
+		System.out.println("Qustion 3");
+		
+		int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5 };
+		System.out.println("Enter number: ");
+		int num = scanner.nextInt();
+		int count = 0;
+		for (int n : numbers) {
+			if (n == num) {
+				count++;
+			}
+		}
+		System.out.println(num + " appears " + count + " times in the array");
+		
 		
 		scanner.close();
 		
