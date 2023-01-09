@@ -55,6 +55,25 @@ public class Array {
 		}
 		System.out.println(num + " appears " + count + " times in the array");
 		
+		System.out.println("**********************");
+		System.out.println("Qustion 4");
+		
+		int[] numbers3 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		System.out.println("Enter number: ");
+		int num3= scanner.nextInt();
+		List<int[]> pairs = new ArrayList<>();
+		for (int i = 0; i < numbers3.length; i++) {
+		  for (int j = i + 1; j < numbers3.length; j++) {
+		    if (numbers3[i] + numbers3[j] == num3) {
+		      pairs.add(new int[]{numbers3[i], numbers3[j]});
+		    }
+		  }
+		}
+
+		for (int[] pair : pairs) {
+		  System.out.println("["+pair[0] + "," + pair[1]+"]");
+		}
+		
 		
 		scanner.close();
 		
