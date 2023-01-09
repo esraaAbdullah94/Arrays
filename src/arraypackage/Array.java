@@ -1,6 +1,7 @@
 package arraypackage;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -74,6 +75,32 @@ public class Array {
 		  System.out.println("["+pair[0] + "," + pair[1]+"]");
 		}
 		
+		System.out.println("**********************");
+		System.out.println("Qustion 5");
+		
+		int[] array = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5};
+
+		int[] result = new int[array.length];
+		int index = 0;
+		for (int i = 0; i < array.length; i++) {
+		    boolean isDuplicate = false;
+		    for (int j = 0; j < i; j++) {
+		        if (array[i] == array[j]) {
+		            isDuplicate = true; 
+		            break;
+		        }
+		        
+		    }
+		    if (!isDuplicate) {
+		        result[index++] = array[i];
+		        
+		    }
+		    
+		}
+		//System.out.println("Input "+ "[1, 1, 2, 2, 3, 3, 4, 4, 5, 5]");
+		result = Arrays.copyOf(result, index);
+		
+		System.out.println("Length of new array: "+result.length + "\n" +" Output "+ Arrays.toString(result));
 		
 		scanner.close();
 		
