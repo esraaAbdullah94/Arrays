@@ -78,7 +78,8 @@ public class Array {
 		System.out.println("**********************");
 		System.out.println("Qustion 5");
 		
-		int[] array = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5};
+		//int[] array = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5};
+		int[] array = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4};
 
 		int[] result = new int[array.length];
 		int index = 0;
@@ -103,6 +104,17 @@ public class Array {
 		System.out.println("Length of new array: "+result.length + "\n" +" Output "+ Arrays.toString(result));
 		
 		scanner.close();
+		System.out.println("**********************");
+		System.out.println("Qustion 6");
+		
+		int[] firstArray = {1, 2, 3, 4, 5};        //source array  
+		int[] secondArray = {6, 7, 8, 9, 10};  //destination array  
+		int fal = firstArray.length;        //determines length of firstArray  
+		int sal = secondArray.length;   //determines length of secondArray  
+		int[] resultt = new int[fal + sal];  //resultant array of size first array and second array  
+		System.arraycopy(firstArray, 0, resultt, 0, fal);  
+		System.arraycopy(secondArray, 0, resultt, fal, sal);  
+		System.out.println(Arrays.toString(resultt));
 		
 	}
 
