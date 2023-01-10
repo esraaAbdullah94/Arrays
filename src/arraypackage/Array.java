@@ -2,6 +2,7 @@ package arraypackage;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -111,17 +112,51 @@ public class Array {
 		System.out.println("Length of new array: " + result.length + "\n" + " Output " + Arrays.toString(result));
 
 		System.out.println("**********************");
-		System.out.println("Qustion 7");
+		System.out.println("Other solution for question 6");
+		
+		int[] arrayy = { 5, 3, 2, 4, 1, 5, 2, 0 }; // the array with duplicates
 
-		int[] firstArray = { 1, 2, 3, 4, 5 }; // source array
-		int[] secondArray = { 6, 7, 8, 9, 10 }; // destination array
-		int fal = firstArray.length; // determines length of firstArray
-		int sal = secondArray.length; // determines length of secondArray
-		int[] resultt = new int[fal + sal]; // resultant array of size first array and second array
-		System.arraycopy(firstArray, 0, resultt, 0, fal);
-		System.arraycopy(secondArray, 0, resultt, fal, sal);
-		System.out.println(Arrays.toString(resultt));
+		int[] newArray = new int[arrayy.length];
+		int indexx = 0;
+		for (int i = 0; i < arrayy.length; i++) {
+			boolean isDuplicate = false;
+			for (int j = 0; j < i; j++) {
+				if (arrayy[i] == arrayy[j]) {
+					isDuplicate = true;
+					break;
+				}
+			}
+			if (!isDuplicate) {
+				newArray[indexx] = arrayy[i];
+				indexx++;
+			}
+		}
+		int[] finalArray = Arrays.copyOfRange(newArray, 0, indexx);
 
+		// sort the unique array
+		Arrays.sort(finalArray);
+
+		// print the sorted unique array
+		System.out.print("The sorted unique array is: ");
+		for (int i : finalArray) {
+			System.out.print(i + " ");
+		}
+
+		/*
+		 * System.out.println("**********************");
+		 * System.out.println("Qustion 7");
+		 * 
+		 * int[] firstArray = { 1, 2, 3, 4, 5 }; // source array int[] secondArray = {
+		 * 6, 7, 8, 9, 10 }; // destination array int fal = firstArray.length; //
+		 * determines length of firstArray int sal = secondArray.length; // determines
+		 * length of secondArray int[] resultt = new int[fal + sal]; // resultant array
+		 * of size first array and second array
+		 * 
+		 * System.arraycopy(firstArray, 0, resultt, 0, fal);
+		 * System.arraycopy(secondArray, 0, resultt, fal, sal);
+		 * 
+		 * System.out.println(Arrays.toString(resultt));
+		 */
 		scanner.close();
 
 	}
