@@ -8,7 +8,12 @@ import java.util.Scanner;
 public class Array {
 
 	public static void main(String[] args) {
-
+		System.out.println("**********************");
+		System.out.println("Finging the second highest number");
+		int numbers[] = { 10,20,30,40,50,60,70,80};
+		Arrays.sort(numbers);
+		System.out.println("The second highest number is: " + numbers[numbers.length-2]);
+////////////////////
 		int number[] = { 1, 2, 22, 2 };
 		int largest = 0;
 		for (int i = 0; i < number.length; i++) {
@@ -53,7 +58,7 @@ public class Array {
 		System.out.println("**********************");
 		System.out.println("Qustion 4");
 
-		int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5 };
+		//int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5 };
 		System.out.println("Enter number: ");
 		int num = scanner.nextInt();
 		int count = 0;
@@ -155,6 +160,7 @@ public class Array {
 		  System.arraycopy(secondArray, 0, resultt, fal, sal);
 		  
 		  System.out.println(Arrays.toString(resultt));
+		  
 		 
 		scanner.close();
 
