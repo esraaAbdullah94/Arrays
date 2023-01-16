@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Array {
 
 	public static void main(String[] args) {
+		
 		System.out.println("**********************");
 		System.out.println("Finging the second highest number");
 		int numbers[] = { 10,20,30,40,50,60,70,80};
