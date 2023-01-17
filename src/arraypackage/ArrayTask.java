@@ -82,7 +82,7 @@ public class ArrayTask {
 		}
 
 		System.out.println("Number " + maxNum + " is the most repeated and is greater than 10, it appears " + maxCount + " times.");
-		System.out.println("****Answer q4****");
+		System.out.println("****Answer q5****");
 		System.out.println("*********************");
 		int[] nummbers = {5, 10, 20, 25, 30};
 		int expectedNum = 5;
@@ -98,6 +98,22 @@ public class ArrayTask {
 		    }
 		    expectedNum = nummbers[i2] + 1;
 		}
+		System.out.println("****Answer q6****");
+		System.out.println("*********************");
+		int[] arraay = {1, 2, 4, 6, 8, 10};
+		int k = 10;
+
+		for (int i3 = 0; i3 < arraay.length; i3++) {
+		    if (arraay[i3] % 2 == 0) {
+		        for (int j = i3+1; j < arraay.length; j++) {
+		            if (arraay[j] % 2 == 0 && arraay[i3] + arraay[j] == k) {
+		                System.out.println(arraay[i3] + " + " + arraay[j] + " = " + k);
+		                return;
+		            }
+		        }
+		    }
+		}
+		System.out.println("False");
 	}
 
 }
