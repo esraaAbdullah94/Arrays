@@ -60,6 +60,7 @@ public class ArrayTask {
 		System.out.println(Arrays.toString(newArray));
 		
 		System.out.println("****Answer q4****");
+		System.out.println("*********************");
 		int[] numberss = {1, 2, 15, 20, 15, 30, 20, 15, 15};
 		int maxCount = 0;
 		int maxNum = 0;
@@ -81,7 +82,22 @@ public class ArrayTask {
 		}
 
 		System.out.println("Number " + maxNum + " is the most repeated and is greater than 10, it appears " + maxCount + " times.");
+		System.out.println("****Answer q4****");
+		System.out.println("*********************");
+		int[] nummbers = {5, 10, 20, 25, 30};
+		int expectedNum = 5;
 
+		for (int i2 = 0; i2 < nummbers.length; i2++) {
+		    if (nummbers[i2] > expectedNum) {
+		        while (expectedNum < nummbers[i2]) {
+		            if (expectedNum % 5 == 0) {
+		                System.out.println("Missing number: " + expectedNum);
+		            }
+		            expectedNum++;
+		        }
+		    }
+		    expectedNum = nummbers[i2] + 1;
+		}
 	}
 
 }
