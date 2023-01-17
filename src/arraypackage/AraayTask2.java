@@ -12,14 +12,21 @@ public class AraayTask2 {
 		stack.push( "Item 2" );
 		stack.push ("Item 3" );
 		stack.push( "Item 4");
-		
-
+		stack.push( "Item 5");
+		System.out.println("**** push and pop operations****");
+		System.out.println("*********************");
 		System.out.println("Topmost Element of the stack: " + stack.peek());
 		stack.pop();
 		System.out.println("After popping one item:");
 		System.out.println("Topmost Element of the stack: " + stack.peek());
 		
-		System.out.println("****Answer q6****");
+		System.out.println("**** Try to use get for the middle element****");
+		System.out.println("*********************");
+		System.out.println("Middle Element of the stack: " + stack.get(2));
+		
+		
+		
+		System.out.println("**** A palindrome using a stack****");
 		System.out.println("*********************");
 		System.out.print("Enter any string:");
         Scanner scanner=new Scanner(System.in);
