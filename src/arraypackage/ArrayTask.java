@@ -19,8 +19,9 @@ public class ArrayTask {
 		System.out.println("The third highest number in the array is " + array[array.length - 3]);
 
 
-		System.out.println("*********************");
+		
 		System.out.println("****Answer q2****");
+		System.out.println("*********************");
 		Integer[] numbers = { 1, 2, 3, 4, 5, 6 };
 
 		Arrays.sort(numbers, Comparator.reverseOrder());
@@ -82,6 +83,7 @@ public class ArrayTask {
 		}
 
 		System.out.println("Number " + maxNum + " is the most repeated and is greater than 10, it appears " + maxCount + " times.");
+		
 		System.out.println("****Answer q5****");
 		System.out.println("*********************");
 		int[] nummbers = {5, 10, 20, 25, 30};
@@ -98,6 +100,7 @@ public class ArrayTask {
 		    }
 		    expectedNum = nummbers[i2] + 1;
 		}
+		
 		System.out.println("****Answer q6****");
 		System.out.println("*********************");
 		int[] arraay = {1, 2, 4, 6, 8, 10};
